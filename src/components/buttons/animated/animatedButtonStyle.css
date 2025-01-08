@@ -1,0 +1,70 @@
+.codepen-button {
+    display: block;
+    cursor: pointer;
+    color: #000;
+    margin: 0 auto;
+    position: relative;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    overflow: hidden;
+    padding: 3px;
+    /* isolation: isolate; */
+  }
+  
+  .codepen-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 420%;
+    height: 100%;
+    background: linear-gradient(
+      115deg,
+      #628fbc,
+      hsl(0, 93%, 73%),
+      #f032a7,
+      #329af0,
+      #f032a7
+    );
+    background-size: 25% 100%;
+    animation: border-animation 0.75s linear infinite;
+    animation-play-state: paused;
+    translate: -5% 0%;
+    transition: translate 0.25s ease-out;
+  }
+  
+  .codepen-button:hover::before {
+    animation-play-state: running;
+    transition-duration: 0.75s;
+    translate: 0% 0%;
+  }
+  
+  @keyframes border-animation {
+    to {
+      transform: translateX(-25%);
+    }
+  }
+  
+  .codepen-button span {
+    position: relative;
+    display: block;
+    /* padding: 1rem 1.5rem; */
+    padding:10px 15px;
+    background: #fff;
+    border-radius: 3px;
+    height: 100%;
+  }
+  
+  .codepen-button .span {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .codepen-button .p {
+    margin: 0;
+  }
+  

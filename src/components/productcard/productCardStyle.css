@@ -1,0 +1,134 @@
+.product-card-wrapper {
+  padding: 5px 4px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  flex-direction: column;
+  display: flex;
+  gap: 5px;
+}
+
+/* .product-card-wrapper:hover {
+    transform: translateY(-5px);
+  } */
+
+/* Image Section */
+.image-section {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+/* .product-card-wrapper:hover .product-image {
+    transform: scale(1.05);
+  } */
+
+/* Color Strip Section */
+.color-strip {
+  width: 100%;
+  height: 3px;
+  margin-top: -5px; /* Slight overlap */
+  margin-bottom: -5px; /* Slight overlap */
+  background: linear-gradient(
+    142deg,
+    rgba(29, 215, 245, 1) 0%,
+    rgba(151, 59, 235, 1) 66%,
+    rgba(83, 81, 255, 0.98) 100%
+  );
+  background-size: 200% 200%; /* This will allow the background to shift */
+  animation: gradientAnimation 3s linear infinite; /* Animation applied */
+}
+
+/* Keyframes for Gradient Animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Footer Section */
+.footer-section {
+  padding: 20px;
+  background-color: #fef9e1; /* Light gray background for a clean look */
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  text-align: center; /* Center the text for a neat, premium look */
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.05); /* Subtle inner shadow */
+}
+
+/* Product Name */
+.product-name {
+  font-size: 1.4rem; /* Larger size for emphasis */
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 5px;
+  letter-spacing: 0.5px; /* Slight spacing between letters for a premium feel */
+}
+
+/* Product Description */
+.product-description {
+  font-size: 1rem;
+  color: #666; /* Softer gray color for description */
+  margin-bottom: 15px; /* Spacing between description and price */
+  font-style: italic; /* Adds a touch of sophistication */
+}
+
+/* Product Price */
+.product-price {
+  font-size: 1.2rem;
+  color: #2c3e50; /* Darker color for the price */
+  font-weight: 600;
+  margin-top: 10px;
+  background-color: #f39c12; /* Premium yellow/orange color */
+  color: white;
+  padding: 8px 20px;
+  border-radius: 30px;
+  display: inline-block;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow to make the price pop */
+}
+
+.product-price:hover {
+  background-color: #e67e22; /* Slight hover effect on the price */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-section {
+    padding: 15px;
+  }
+
+  .product-name {
+    font-size: 1.2rem;
+  }
+
+  .product-description {
+    font-size: 0.9rem;
+  }
+
+  .product-price {
+    font-size: 1rem;
+    padding: 6px 16px;
+  }
+}
+
+.button-section {
+  /* background:red; */
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
