@@ -1,0 +1,20 @@
+.buttonStyle{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius:3px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    gap:10px;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+.button-icon{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
